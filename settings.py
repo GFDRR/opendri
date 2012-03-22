@@ -155,11 +155,22 @@ GEOSERVER_TOKEN = open(os.path.join(PROJECT_ROOT,"geoserver_token")).readline()[
 # The username and password for a user that can add and edit layer details on GeoServer
 GEOSERVER_CREDENTIALS = "geoserver_admin", GEOSERVER_TOKEN
 
-# The FULLY QUALIFIED url to the GeoNetwork instance for this GeoNode
-GEONETWORK_BASE_URL = "http://localhost:8001/geonetwork/"
+# CSW settings
+CSW = {
+    # The underlying CSW implementation ("pycsw", "geonetwork", "deegree")
+    'type': 'pycsw',
+    #'type': 'geonetwork',
+    #'type': 'deegree',
 
-# The username and password for a user with write access to GeoNetwork
-GEONETWORK_CREDENTIALS = "admin", "admin"
+    # The FULLY QUALIFIED base url to the CSW instance for this GeoNode
+    'url': 'http://opendri.dev.opengeo.org/pycsw/',
+    #'url': 'http://catalog.dev.geonode.org:8001/geonetwork/srv/en/csw',
+    #'url': 'http://catalog.dev.geonode.org:8001/deegree-csw-demo-3.0.4/services',
+
+    # login credentials (for GeoNetwork)
+    'username': 'admin',
+    'password': 'admin'
+}
 
 AUTHENTICATION_BACKENDS = ('geonode.core.auth.GranularBackend',)
 
