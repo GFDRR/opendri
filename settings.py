@@ -239,10 +239,13 @@ INSTALLED_APPS = (
     'registration',
     'profiles',
     'avatar',
+    'taggit',
     'south',
+    'haystack',
     'geonode.core',
     'geonode.maps',
     'geonode.proxy',
+    'geonode.search',
     'geonode'
 )
 
@@ -274,6 +277,14 @@ DB_DATASTORE_PASSWORD = ''
 DB_DATASTORE_HOST = ''
 DB_DATASTORE_PORT = ''
 DB_DATASTORE_TYPE=''
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'geonode',
+    },
+}
 
 SOUTH_MIGRATION_MODULES = {
     'registration': 'geonode.migrations.registration',
