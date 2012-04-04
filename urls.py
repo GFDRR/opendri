@@ -39,6 +39,7 @@ urlpatterns = patterns('',
     (r'^avatar/', include('avatar.urls')),
     (r'^accounts/', include('registration.urls')),
     (r'^profiles/', include('profiles.urls')),
+    (r'^portals/', include('geonode.portals.urls')),
     (r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     (r'search/', include('geonode.search.urls')),
     )

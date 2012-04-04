@@ -236,16 +236,20 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'staticfiles',
     'django_extensions',
+
     'registration',
     'profiles',
     'avatar',
     'taggit',
     'south',
     'haystack',
+    'cbv',
+
     'geonode.core',
     'geonode.maps',
     'geonode.proxy',
     'geonode.search',
+    'geonode.portals',
     'geonode'
 )
 
