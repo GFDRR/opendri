@@ -162,6 +162,7 @@ CSW = {
     'type': 'pycsw',
     #'type': 'geonetwork',
     #'type': 'deegree',
+    'localdb': True,
 
     # The FULLY QUALIFIED base url to the CSW instance for this GeoNode
     'url': 'http://opendri.dev.opengeo.org/pycsw/',
@@ -270,7 +271,7 @@ REGISTRATION_OPEN = False
 SERVE_MEDIA = DEBUG;
 
 #GEONODE_CLIENT_LOCATION = "http://localhost:8001/geonode-client/"
-GEONODE_CLIENT_LOCATION = "/media/static/"
+GEONODE_CLIENT_LOCATION = "/media/static/static/"
 
 #Import uploaded shapefiles into a database such as PostGIS?
 DB_DATASTORE=False
